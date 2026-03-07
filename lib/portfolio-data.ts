@@ -37,6 +37,16 @@ export type PortfolioProfile = {
     detail: string;
   }[];
   philosophy: string[];
+  valueCriteria: {
+    valuable: string[];
+    doneRight: string[];
+  };
+  techAdoptionPrinciples: string[];
+  aiWorkflow: {
+    before: string[];
+    now: string[];
+    impact: string;
+  };
   collaborationPrinciples: string[];
   futureGoal: string;
   contacts: {
@@ -120,6 +130,40 @@ export const portfolioProfile: PortfolioProfile = {
     "복잡한 구조는 필요할 때만 선택하고, 같은 효과면 더 단순한 해법을 택합니다.",
     "기능 완료는 시작일 뿐이며 배포 이후 운영 안정성까지 확인해야 진짜 완료입니다.",
   ],
+  valueCriteria: {
+    valuable: [
+      "사용자/고객의 실제 문제를 해결하는가",
+      "팀과 회사가 지속적으로 운영 가능한가",
+      "비용 대비 효과가 분명한가",
+    ],
+    doneRight: [
+      "요구사항을 정확히 반영했는가",
+      "운영 환경에서 안정적으로 동작하는가",
+      "확장 시 변경 비용을 감당할 수 있는가",
+      "불필요한 복잡도와 비용을 피했는가",
+      "사용성과 신뢰를 해치지 않았는가",
+    ],
+  },
+  techAdoptionPrinciples: [
+    "현재 문제를 실제로 해결하는가",
+    "운영 부담을 줄이는가",
+    "팀이 유지보수 가능한 수준인가",
+    "팀 동의와 공감대를 확보했는가",
+    "필요 없으면 도입하지 않는가",
+  ],
+  aiWorkflow: {
+    before: [
+      "요구사항 정의서 -> 화면 설계서 -> 디자인 -> DB/API 설계 -> 구현 순으로 긴 사이클 진행",
+      "문서 완성도가 높아질 때까지 구현 착수와 검증이 지연되는 경우가 잦음",
+    ],
+    now: [
+      "모호한 요구사항을 AI와 함께 빠르게 구체화",
+      "목업 프론트로 방향을 선검증한 뒤 DB/API를 짧은 사이클로 확정",
+      "구현과 연동, 피드백 반영을 반복하며 end-to-end 속도를 높임",
+    ],
+    impact:
+      "아이디어에서 동작 가능한 기능까지 도달하는 시간을 단축하면서도 운영 가능한 품질 기준을 유지하게 되었습니다.",
+  },
   collaborationPrinciples: [
     "커뮤니케이션은 장황함보다 사실 중심으로, \"누가 무엇을 언제까지\"가 바로 보이게 정리합니다.",
     "의견 충돌 시 감정보다 근거와 맥락으로 조율하고, 상대가 수용하기 쉬운 방식으로 제안합니다.",
@@ -153,7 +197,7 @@ export const projects: PortfolioProject[] = [
       "유사 API 재사용성이 높아져 신규 기능 구현과 온보딩 효율 향상",
     ],
     links: [],
-    images: ["/project-01.png"],
+    images: [],
   },
   {
     id: "deployment-automation",
@@ -172,7 +216,7 @@ export const projects: PortfolioProject[] = [
       "작업자에 따른 편차를 줄여 릴리즈 안정성 향상",
     ],
     links: [],
-    images: ["/project-02.png"],
+    images: [],
   },
   {
     id: "api-standardization",
@@ -191,7 +235,7 @@ export const projects: PortfolioProject[] = [
       "프론트 개발 속도와 협업 품질 개선",
     ],
     links: [],
-    images: ["/project-03.png"],
+    images: [],
   },
   {
     id: "jobs-platform",
@@ -210,7 +254,7 @@ export const projects: PortfolioProject[] = [
       "핵심 기능 변경 시 릴리즈 신뢰도 향상",
     ],
     links: [],
-    images: ["/project-04.png"],
+    images: [],
   },
   {
     id: "anarme",
@@ -229,7 +273,7 @@ export const projects: PortfolioProject[] = [
       "프론트-백엔드 변경 충돌 감소",
     ],
     links: [],
-    images: ["/project-05.png"],
+    images: [],
   },
   {
     id: "augment-holdem",
@@ -248,6 +292,6 @@ export const projects: PortfolioProject[] = [
       "실시간 상태 전파 구조에 대한 운영 경험 축적",
     ],
     links: [],
-    images: ["/project-06.png"],
+    images: [],
   },
 ];

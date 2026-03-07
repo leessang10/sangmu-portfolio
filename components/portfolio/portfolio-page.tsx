@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { ContactSection } from "@/components/portfolio/contact-section";
 import { CareerHighlightsSection } from "@/components/portfolio/career-highlights-section";
+import { ExtendedProfileSection } from "@/components/portfolio/extended-profile-section";
 import { SiteFooter } from "@/components/portfolio/footer";
 import { HeroSection } from "@/components/portfolio/hero-section";
 import { PhilosophySection } from "@/components/portfolio/philosophy-section";
@@ -24,6 +25,7 @@ export function PortfolioPage() {
         <PhilosophySection profile={portfolioProfile} />
         <ProjectGridSection projects={projects} onOpenProject={setSelectedProject} />
         <WorkStyleSection profile={portfolioProfile} />
+        <ExtendedProfileSection profile={portfolioProfile} />
         <ContactSection profile={portfolioProfile} />
         <SiteFooter />
       </div>

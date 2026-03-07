@@ -18,7 +18,11 @@ export function ProjectCard({ project, onOpen }: ProjectCardProps) {
             className="object-cover transition duration-500 group-hover:scale-105"
           />
         ) : (
-          <div className="flex h-full items-center justify-center text-sm text-slate-400">캡처 준비 중</div>
+          <div className="flex h-full flex-col items-center justify-center bg-[linear-gradient(135deg,#0b1c2d_0%,#12263a_45%,#0f172a_100%)] px-4 text-center">
+            <p className="text-xs uppercase tracking-[0.16em] text-cyan-200/75">No Preview</p>
+            <p className="mt-2 text-sm font-medium text-slate-200">{project.title}</p>
+            <p className="mt-1 text-xs text-slate-400">캡처 준비 중</p>
+          </div>
         )}
       </div>
       <div className="p-5">

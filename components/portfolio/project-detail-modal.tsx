@@ -131,8 +131,13 @@ export function ProjectDetailModal({ project, open, onClose }: ProjectDetailModa
                 />
               </div>
             ) : (
-              <div className="rounded-2xl border border-dashed border-white/20 p-8 text-center text-sm text-slate-400">
-                캡처 준비 중
+              <div className="rounded-2xl border border-dashed border-white/20 bg-[linear-gradient(135deg,#0b1c2d_0%,#12263a_45%,#0f172a_100%)] p-8 text-center">
+                <p className="text-xs uppercase tracking-[0.16em] text-cyan-200/75">No Preview</p>
+                <p className="mt-2 text-base font-medium text-slate-100">{project.title}</p>
+                <p className="mt-2 text-sm text-slate-300">
+                  현재 이 프로젝트의 실제 화면 캡처를 정리 중입니다.
+                </p>
+                <p className="mt-1 text-xs text-slate-400">캡처 준비 중</p>
               </div>
             )}
           </div>
