@@ -220,9 +220,9 @@ export const projects: PortfolioProject[] = [
   },
   {
     id: "api-standardization",
-    title: "API 표준화 및 운영 규격 정비",
+    title: "GAPCK 운영 API 표준화 및 규격 정비",
     period: "2024 - 2025",
-    summary: "경로/응답/에러 응답 형식을 표준화해 프론트-백엔드 협업 예측 가능성을 높인 작업",
+    summary: "GAPCK 운영 환경에서 경로/응답/에러 응답 형식을 표준화해 협업 예측 가능성을 높인 작업",
     role: "Backend / Integrator",
     stack: ["React", "Express", "NestJS", "pnpm", "Turborepo"],
     contributions: [
@@ -235,7 +235,7 @@ export const projects: PortfolioProject[] = [
       "프론트 개발 속도와 협업 품질 개선",
     ],
     links: [],
-    images: [],
+    images: ["/gapck_main.png"],
   },
   {
     id: "jobs-platform",
@@ -254,7 +254,7 @@ export const projects: PortfolioProject[] = [
       "핵심 기능 변경 시 릴리즈 신뢰도 향상",
     ],
     links: [],
-    images: [],
+    images: ["/jobs_main.png"],
   },
   {
     id: "anarme",
@@ -273,7 +273,7 @@ export const projects: PortfolioProject[] = [
       "프론트-백엔드 변경 충돌 감소",
     ],
     links: [],
-    images: [],
+    images: ["/tlooto_main.png", "/tlooto_b2b.png", "/tlooto_chat.png"],
   },
   {
     id: "augment-holdem",
