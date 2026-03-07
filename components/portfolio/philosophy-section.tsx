@@ -6,7 +6,7 @@ type PhilosophySectionProps = {
 
 export function PhilosophySection({ profile }: PhilosophySectionProps) {
   return (
-    <section aria-labelledby="philosophy-title" className="mt-16">
+    <section id="philosophy" aria-labelledby="philosophy-title" className="mt-16 scroll-mt-24">
       <div className="mb-6 flex items-end justify-between gap-4">
         <h2 id="philosophy-title" className="text-2xl font-semibold text-white md:text-3xl">
           개발 철학

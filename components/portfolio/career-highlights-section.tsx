@@ -6,7 +6,7 @@ type CareerHighlightsSectionProps = {
 
 export function CareerHighlightsSection({ profile }: CareerHighlightsSectionProps) {
   return (
-    <section aria-labelledby="career-title" className="mt-16">
+    <section id="career" aria-labelledby="career-title" className="mt-16 scroll-mt-24">
       <div className="mb-6 flex items-end justify-between gap-4">
         <h2 id="career-title" className="text-2xl font-semibold text-white md:text-3xl">
           이력과 핵심 성과

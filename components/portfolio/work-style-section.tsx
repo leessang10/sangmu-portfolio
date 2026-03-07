@@ -6,7 +6,7 @@ type WorkStyleSectionProps = {
 
 export function WorkStyleSection({ profile }: WorkStyleSectionProps) {
   return (
-    <section aria-labelledby="work-style-title" className="mt-16">
+    <section id="work-style" aria-labelledby="work-style-title" className="mt-16 scroll-mt-24">
       <div className="mb-6 flex items-end justify-between gap-4">
         <h2 id="work-style-title" className="text-2xl font-semibold text-white md:text-3xl">
           업무 방식과 협업 원칙
