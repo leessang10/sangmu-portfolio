@@ -19,9 +19,17 @@ export function ProjectCard({ project, onOpen }: ProjectCardProps) {
           />
         ) : (
           <div className="flex h-full flex-col items-center justify-center bg-[linear-gradient(135deg,#0b1c2d_0%,#12263a_45%,#0f172a_100%)] px-4 text-center">
-            <p className="text-xs uppercase tracking-[0.16em] text-cyan-200/75">No Preview</p>
-            <p className="mt-2 text-sm font-medium text-slate-200">{project.title}</p>
-            <p className="mt-1 text-xs text-slate-400">캡처 준비 중</p>
+            <div className="flex flex-wrap items-center justify-center gap-2">
+              {project.stack.slice(0, 5).map((tech) => (
+                <span
+                  key={tech}
+                  className="rounded-md border border-cyan-300/20 bg-cyan-300/10 px-2 py-1 text-[10px] font-medium text-cyan-200/90"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+            <p className="mt-3 text-xs font-medium tracking-wide text-slate-400">{project.role}</p>
           </div>
         )}
       </div>
