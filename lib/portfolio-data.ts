@@ -172,8 +172,8 @@ export const portfolioProfile: PortfolioProfile = {
   futureGoal:
     "AI를 생산성 증폭 도구로 활용하면서도, 운영 가능한 품질 기준을 놓치지 않는 팀 기여를 계속 만들겠습니다. 장기적으로는 기술 과시가 아니라 가치 있는 문제를 정확히 정의하고 끝까지 해결하는 개발자로 성장하는 것이 목표입니다.",
   contacts: [
-    { label: "Email (업데이트 예정)", href: "mailto:contact@update-needed.dev" },
-    { label: "GitHub", href: "https://github.com" },
+    { label: "Email", href: "mailto:leessang10@gmail.com" },
+    { label: "GitHub", href: "https://github.com/leessang10" },
   ],
   profileImage: "/profile-sangmu.png",
 };
@@ -196,7 +196,9 @@ export const projects: PortfolioProject[] = [
       "구조/네이밍 규칙이 정착되며 코드 이해도와 협업 속도 개선",
       "유사 API 재사용성이 높아져 신규 기능 구현과 온보딩 효율 향상",
     ],
-    links: [],
+    links: [
+      { type: "github", label: "GitHub", href: "https://github.com/leessang10/backend-boilerplate" },
+    ],
     images: [],
   },
   {
@@ -272,26 +274,51 @@ export const projects: PortfolioProject[] = [
       "서비스 권한/역할 분리 명확화",
       "프론트-백엔드 변경 충돌 감소",
     ],
-    links: [],
+    links: [
+      { type: "github", label: "GitHub", href: "https://github.com/leessang10/tlooto_project" },
+    ],
     images: ["/tlooto_main.png", "/tlooto_b2b.png", "/tlooto_chat.png"],
   },
   {
-    id: "augment-holdem",
-    title: "Augment Holdem (Realtime Game)",
-    period: "2024",
-    summary: "실시간 상태 동기화와 룸 기반 세션 관리를 구현하며 이벤트 흐름 안정성을 검증한 프로젝트",
-    role: "Server / Realtime",
-    stack: ["Colyseus", "TypeScript", "Express", "Vite"],
+    id: "backend-boilerplate",
+    title: "NestJS Backend Boilerplate",
+    period: "2026",
+    summary: "NestJS 기반 백엔드 보일러플레이트로 Docker, K8s, Grafana 모니터링까지 포함한 운영 수준의 프로젝트 시작 템플릿",
+    role: "Backend / Architecture",
+    stack: ["NestJS", "Prisma", "PostgreSQL", "Docker", "Kubernetes", "Grafana"],
     contributions: [
-      "로비/게임 룸 상태 모델 설계",
-      "실시간 이벤트 흐름과 게임 시작/종료 처리 구현",
-      "클라이언트-서버 동기화 시나리오 안정화",
+      "모듈 구조, 인증, 에러 핸들링 등 핵심 보일러플레이트 설계",
+      "Docker Compose + K8s 매니페스트로 로컬/운영 환경 일관성 확보",
+      "Grafana 대시보드와 헬스체크 기반 모니터링 구조 구축",
     ],
     outcomes: [
-      "멀티 유저 세션 시나리오 검증",
-      "실시간 상태 전파 구조에 대한 운영 경험 축적",
+      "신규 프로젝트 초기 셋업 시간 단축",
+      "팀 내 백엔드 구조 표준으로 채택",
     ],
-    links: [],
+    links: [
+      { type: "github", label: "GitHub", href: "https://github.com/leessang10/backend-boilerplate" },
+    ],
+    images: [],
+  },
+  {
+    id: "payslip",
+    title: "급여명세서 PDF 제작기",
+    period: "2026",
+    summary: "대한민국 급여명세서를 PDF로 자동 생성하는 웹 도구. Next.js 기반으로 입력부터 PDF 출력까지 단일 앱에서 처리",
+    role: "Full-Stack / Solo",
+    stack: ["Next.js", "TypeScript", "Tailwind CSS"],
+    contributions: [
+      "급여 항목 입력 UI와 실시간 미리보기 구현",
+      "PDF 렌더링 및 다운로드 기능 개발",
+      "한국 급여명세서 양식에 맞춘 레이아웃 설계",
+    ],
+    outcomes: [
+      "소규모 사업장에서 활용 가능한 실용 도구 완성",
+      "프론트엔드 PDF 생성 파이프라인 경험 축적",
+    ],
+    links: [
+      { type: "github", label: "GitHub", href: "https://github.com/leessang10/payslip" },
+    ],
     images: [],
   },
 ];
