@@ -13,7 +13,7 @@ export function ProjectGridSection({ projects, onOpenProject }: ProjectGridSecti
         <h2 id="projects-title" className="text-2xl font-semibold text-white md:text-3xl">
           대표 프로젝트
         </h2>
-        <p className="text-xs uppercase tracking-[0.22em] text-slate-500">Selected 6 Works</p>
+        <p className="text-xs uppercase tracking-[0.22em] text-slate-500">Selected {projects.length} Works</p>
       </div>
 
       <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
