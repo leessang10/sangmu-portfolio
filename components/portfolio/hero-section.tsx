@@ -25,6 +25,17 @@ export function HeroSection({ profile }: HeroSectionProps) {
             {profile.intro}
           </p>
 
+          <ul className="mt-6 flex flex-wrap gap-2">
+            {profile.badges.map((badge) => (
+              <li
+                key={badge}
+                className="rounded-full border border-cyan-200/20 bg-cyan-300/10 px-3 py-1 text-xs text-cyan-100"
+              >
+                {badge}
+              </li>
+            ))}
+          </ul>
+
           <div className="mt-8 flex flex-wrap gap-3">
             <a
               href="#projects"
