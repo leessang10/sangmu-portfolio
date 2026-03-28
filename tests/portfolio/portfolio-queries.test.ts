@@ -17,4 +17,11 @@ describe("portfolio queries", () => {
       "api-standardization",
     ]);
   });
+
+  it("respects the requested featured project limit", () => {
+    expect(getFeaturedProjects(2).map((project) => project.id)).toEqual([
+      "nestjs-migration",
+      "deployment-automation",
+    ]);
+  });
 });
