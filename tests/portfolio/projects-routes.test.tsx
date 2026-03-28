@@ -57,10 +57,16 @@ describe("Projects routes", () => {
     expect(screen.getByRole("link", { name: "Projects" })).toHaveAttribute("aria-current", "page");
     expect(screen.getByRole("heading", { level: 1, name: "Projects" })).toBeInTheDocument();
     expect(screen.getByText("Selected 7 Works")).toBeInTheDocument();
-    const detailLinks = screen.getAllByRole("link", { name: "프로젝트 자세히 보기" });
-
-    expect(detailLinks).toHaveLength(7);
-    expect(detailLinks[0]).toHaveAttribute("href", "/projects/nestjs-migration");
+    expect(
+      screen.getByRole("link", {
+        name: "Express.js -> NestJS 표준 전환 프로젝트 자세히 보기",
+      })
+    ).toHaveAttribute("href", "/projects/nestjs-migration");
+    expect(
+      screen.getByRole("link", {
+        name: "급여명세서 PDF 제작기 프로젝트 자세히 보기",
+      })
+    ).toHaveAttribute("href", "/projects/payslip");
   });
 
   it("renders a project detail page with project data and navigation links", async () => {

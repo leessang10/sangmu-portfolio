@@ -58,12 +58,20 @@ describe("HomePage", () => {
     render(<HomePage />);
 
     expect(screen.getByRole("heading", { level: 2, name: "대표 프로젝트" })).toBeInTheDocument();
-
-    const detailLinks = screen.getAllByRole("link", { name: "프로젝트 자세히 보기" });
-
-    expect(detailLinks).toHaveLength(3);
-    expect(detailLinks[0]).toHaveAttribute("href", "/projects/nestjs-migration");
-    expect(detailLinks[1]).toHaveAttribute("href", "/projects/deployment-automation");
-    expect(detailLinks[2]).toHaveAttribute("href", "/projects/api-standardization");
+    expect(
+      screen.getByRole("link", {
+        name: "Express.js -> NestJS 표준 전환 프로젝트 자세히 보기",
+      })
+    ).toHaveAttribute("href", "/projects/nestjs-migration");
+    expect(
+      screen.getByRole("link", {
+        name: "선택형 배포 자동화 스크립트 프로젝트 자세히 보기",
+      })
+    ).toHaveAttribute("href", "/projects/deployment-automation");
+    expect(
+      screen.getByRole("link", {
+        name: "GAPCK 운영 API 표준화 및 규격 정비 프로젝트 자세히 보기",
+      })
+    ).toHaveAttribute("href", "/projects/api-standardization");
   });
 });

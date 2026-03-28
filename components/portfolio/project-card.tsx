@@ -49,7 +49,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
 
         <Link
           href={`/projects/${project.id}`}
-          aria-label="프로젝트 자세히 보기"
+          aria-label={`${project.title} 프로젝트 자세히 보기`}
           className="mt-5 inline-flex items-center rounded-full border border-white/20 px-4 py-2 text-sm font-medium text-slate-200 transition hover:border-cyan-300 hover:text-cyan-200"
         >
           자세히 보기
