@@ -1,12 +1,12 @@
 import Image from "next/image";
+import Link from "next/link";
 import type { PortfolioProject } from "@/lib/portfolio-data";
 
 type ProjectCardProps = {
   project: PortfolioProject;
-  onOpen: (project: PortfolioProject) => void;
 };
 
-export function ProjectCard({ project, onOpen }: ProjectCardProps) {
+export function ProjectCard({ project }: ProjectCardProps) {
   return (
     <article className="group overflow-hidden rounded-2xl border border-white/10 bg-[#111827]/75 transition hover:-translate-y-0.5 hover:border-cyan-200/40 hover:shadow-[0_0_0_1px_rgba(34,211,238,0.25)]">
       <div className="relative h-44 w-full overflow-hidden border-b border-white/10">
@@ -47,13 +47,13 @@ export function ProjectCard({ project, onOpen }: ProjectCardProps) {
           ))}
         </div>
 
-        <button
-          type="button"
-          onClick={() => onOpen(project)}
+        <Link
+          href={`/projects/${project.id}`}
+          aria-label="프로젝트 자세히 보기"
           className="mt-5 inline-flex items-center rounded-full border border-white/20 px-4 py-2 text-sm font-medium text-slate-200 transition hover:border-cyan-300 hover:text-cyan-200"
         >
           자세히 보기
-        </button>
+        </Link>
       </div>
     </article>
   );

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import type { PortfolioProfile } from "@/lib/portfolio-data";
 
 type HeroSectionProps = {
@@ -37,18 +38,24 @@ export function HeroSection({ profile }: HeroSectionProps) {
           </ul>
 
           <div className="mt-8 flex flex-wrap gap-3">
-            <a
-              href="#projects"
+            <Link
+              href="/about"
               className="rounded-full bg-cyan-300 px-5 py-2.5 text-sm font-semibold text-slate-900 transition hover:bg-cyan-200"
             >
-              프로젝트 보기
-            </a>
-            <a
-              href="#contact"
+              About 보기
+            </Link>
+            <Link
+              href="/projects"
+              className="rounded-full border border-cyan-300/40 bg-cyan-300/10 px-5 py-2.5 text-sm font-semibold text-cyan-100 transition hover:border-cyan-200 hover:bg-cyan-300/15"
+            >
+              Projects 보기
+            </Link>
+            <Link
+              href="/contact"
               className="rounded-full border border-slate-600 px-5 py-2.5 text-sm font-semibold text-slate-200 transition hover:border-cyan-300 hover:text-cyan-200"
             >
-              연락하기
-            </a>
+              Contact 보기
+            </Link>
           </div>
         </div>
 

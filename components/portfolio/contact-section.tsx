@@ -2,16 +2,27 @@ import type { PortfolioProfile } from "@/lib/portfolio-data";
 
 type ContactSectionProps = {
   profile: PortfolioProfile;
+  title?: string;
+  description?: string;
+  className?: string;
 };
 
-export function ContactSection({ profile }: ContactSectionProps) {
+export function ContactSection({
+  profile,
+  title = "연락처",
+  description = "협업 제안이나 채용 관련 문의를 환영합니다. 아래 채널로 연락 주시면 확인 후 빠르게 답변드리겠습니다.",
+  className,
+}: ContactSectionProps) {
   return (
-    <section id="contact" aria-labelledby="contact-title" className="mt-16 scroll-mt-24 rounded-3xl border border-white/10 bg-[#0f141d] p-6 md:p-8">
+    <section
+      aria-labelledby="contact-title"
+      className={`mt-16 rounded-3xl border border-white/10 bg-[#0f141d] p-6 md:p-8 ${className ?? ""}`.trim()}
+    >
       <h2 id="contact-title" className="text-2xl font-semibold text-white md:text-3xl">
-        연락처
+        {title}
       </h2>
       <p className="mt-3 max-w-2xl text-sm leading-relaxed text-slate-300 md:text-base">
-        협업 제안이나 채용 관련 문의를 환영합니다. 아래 채널로 연락 주시면 확인 후 빠르게 답변드리겠습니다.
+        {description}
       </p>
 
       <div className="mt-6 flex flex-wrap gap-3">
