@@ -124,5 +124,15 @@
   }
   body {
     @apply bg-background text-foreground;
+    letter-spacing: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  ::selection {
+    background: #c2ff57;
+    color: #11140d;
   }
 }

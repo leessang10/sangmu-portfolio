@@ -2,23 +2,23 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "이상무 | Backend & Product Engineer",
+  title: "이상무 | Full-stack Product Engineer",
   description:
-    "이상무 포트폴리오 - 가치 있는 것을 제대로 만드는 백엔드 중심 프로덕트 엔지니어",
+    "이상무 포트폴리오 - 문제 정의부터 구현, 배포, 운영 확인까지 다루는 개발자 포트폴리오",
   metadataBase: new URL("https://sangmu.dev"),
   openGraph: {
-    title: "이상무 | Backend & Product Engineer",
+    title: "이상무 | Full-stack Product Engineer",
     description:
-      "가치 있는 것을 제대로 만드는 백엔드 중심 프로덕트 엔지니어. NestJS, Docker, K8s 기반 운영 가능한 구조 설계.",
+      "문제 정의부터 구현, 배포, 운영 확인까지 다루는 개발자 포트폴리오",
     type: "website",
     locale: "ko_KR",
     siteName: "이상무 포트폴리오",
   },
   twitter: {
     card: "summary_large_image",
-    title: "이상무 | Backend & Product Engineer",
+    title: "이상무 | Full-stack Product Engineer",
     description:
-      "가치 있는 것을 제대로 만드는 백엔드 중심 프로덕트 엔지니어",
+      "문제 정의부터 구현, 배포, 운영 확인까지 다루는 개발자 포트폴리오",
   },
 };
 
